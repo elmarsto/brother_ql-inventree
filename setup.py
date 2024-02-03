@@ -8,7 +8,7 @@ except ImportError:
 try:
     import pypandoc
     LDESC = open('README.md', 'r').read()
-    LDESC = pypandoc.convert(LDESC, 'rst', format='md')
+    LDESC = pypandoc.convert_file(LDESC, 'rst', format='md')
 except (ImportError, IOError, RuntimeError) as e:
     print("Could not create long description:")
     print(str(e))
