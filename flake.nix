@@ -14,7 +14,7 @@
     };
   };
   outputs =
-    { flake-utils, gitignore, nixpkgs, pyproject-nix, std, ... }: flake-utils.lib.eachDefaultSystem (system:
+    { flake-utils, gitignore, nixpkgs, pyproject-nix, ... }: flake-utils.lib.eachDefaultSystem (system:
       let
         app = p: { program = "${p}"; type = "app"; };
         pkgs = import nixpkgs { inherit system; };
